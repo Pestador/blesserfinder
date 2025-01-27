@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Preview</title>
+    <style>
+        /* Fullscreen iframe styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            position: absolute;
+        }
+        /* Base overlay (original) */
+        .overlay {
+            position: absolute;
+            top: 8px;
+            left: 8%;
+            transform: translateX(-50%);
+            background: white;
+            z-index: 1000;
+            width: 280px;
+            height: 47px;
+        }
+        /* Logo overlay */
+        .logo-overlay {
+            position: absolute;
+            top: 8px;
+            left: 12%;  /* Increased from 8% to 12% to move right */
+            transform: translateX(-50%);
+            z-index: 1001;
+            width: 280px;
+            height: 47px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0 15px;
+            font-family: 'Arial', sans-serif;
+        }
+        .logo-text {
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-icon {
+            height: 35px;
+            width: 35px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Original overlay to hide the logo -->
+    <div class="overlay"></div>
+    
+    <!-- New logo overlay -->
+    <div class="logo-overlay">
+        <span class="logo-text">BlesserFinder</span>
+        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 90 L15 45C0 30 10 5 30 5C40 5 47 12 50 20C53 12 60 5 70 5C90 5 100 30 85 45L50 90" fill="#87CEEB"/>
+        </svg>
+    </div>
+    
+    <!-- Iframe -->
+    <iframe src="https://quickdatescript.com/login/" title="blessefinder quickdate: Kemsaltech Demo"></iframe>
+</body>
+</html>
